@@ -86,7 +86,7 @@ DDD 领域驱动设计的中心，主要在于领域模型的设计，以领域�
 - SpringBoot 2.7.2
 - MySQL 5.7 - 如果你使用 8.0 记得更改 pom.xml 中的 mysql 引用
 - Dubbo - [https://cn.dubbo.apache.org/zh-cn/overview/mannual/java-sdk/reference-manual/registry/multicast/](https://cn.dubbo.apache.org/zh-cn/overview/mannual/java-sdk/reference-manual/registry/multicast/) 文档&广播模式地址说明
-
+- zookeeper
 ### 2. 架构
 
 - **源码**：[`https://gitcode.net/KnowledgePlanet/road-map/xfg-frame-ddd`](https://gitcode.net/KnowledgePlanet/road-map/xfg-frame-ddd)
@@ -428,7 +428,7 @@ rate-limiter:
 ## 六、测试验证
 
 - 首先；整个工程由 SpringBoot 驱动，提供了 road-map.sql 测试 SQL 库表语句。你可以在自己的本地mysql上进行执行。它会创建库表。
-- 之后；在 application.yml 配置数据库链接信息。
+- 之后；在 application.yml 配置数据库链接信息。这里需要安装zookeeper，否则会报错。安装教程参考百度or菜鸟教程，安装完成后直接默认启动zookeeper服务即可
 - 之后就可以打开 ApiTest 进行测试了。你可以点击 Application 类的绿色箭头启动工程，使用触发器里的接口调用测试，或者单元测试RPC接口，小傅哥也提供了泛化调用的方式。
 
 <div align="center">
